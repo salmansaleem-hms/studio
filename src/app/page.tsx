@@ -12,6 +12,7 @@ import Skills from '@/components/sections/Skills';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/layout/Footer';
 import PersonalizationTool from '@/components/PersonalizationTool';
+import AnimatedSection from '@/components/AnimatedSection';
 
 const originalContent = {
   aboutMe:
@@ -57,14 +58,30 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
-        <Hero />
-        <AboutMe content={currentContent.aboutMe} />
-        <Education />
-        <WorkExperience content={currentContent.workExperience} />
-        <Skills content={currentContent.technicalSkills} />
-        <Projects />
-        <Certifications />
-        <Contact />
+        <AnimatedSection animationType="fade-in-up">
+          <Hero />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-left">
+          <AboutMe content={currentContent.aboutMe} />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-right">
+          <Education />
+        </AnimatedSection>
+        <AnimatedSection animationType="zoom-in">
+          <WorkExperience content={currentContent.workExperience} />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-up">
+          <Skills content={currentContent.technicalSkills} />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-left">
+          <Projects />
+        </AnimatedSection>
+        <AnimatedSection animationType="zoom-out">
+          <Certifications />
+        </AnimatedSection>
+        <AnimatedSection animationType="fade-in-right">
+          <Contact />
+        </AnimatedSection>
       </main>
       <Footer />
       <PersonalizationTool
