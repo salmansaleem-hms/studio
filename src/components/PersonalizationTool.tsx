@@ -15,6 +15,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Sparkles, Loader2, RotateCcw } from 'lucide-react';
 import { personalizeContent, PersonalizeContentInput, PersonalizeContentOutput } from '@/ai/flows/personalize-content';
 import { useToast } from '@/hooks/use-toast';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface PersonalizationToolProps {
   originalContent: {
@@ -83,56 +84,72 @@ const PersonalizationTool = ({
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 flex flex-col sm:flex-row items-center gap-2">
-      <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogTrigger asChild>
-          <Button size="lg" className="rounded-full shadow-lg w-full sm:w-auto">
-            <Sparkles className="mr-2 h-5 w-5" />
-            Personalize with AI
-          </Button>
-        </DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Personalize Content with AI</DialogTitle>
-            <DialogDescription>
-              Paste a job description below to tailor the portfolio content to highlight the most relevant skills and experiences.
-            </DialogDescription>
-          </DialogHeader>
-          <div className="py-4">
-            <Textarea
-              placeholder="Paste the job description here..."
-              className="min-h-[200px]"
-              value={jobDescription}
-              onChange={(e) => setJobDescription(e.target.value)}
-            />
-          </div>
-          <DialogFooter>
-            <Button
-              onClick={handlePersonalize}
-              disabled={isLoading}
-            >
-              {isLoading ? (
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              ) : (
-                <Sparkles className="mr-2 h-4 w-4" />
-              )}
-              Personalize
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-      {isPersonalized && (
-         <Button
-            variant="outline"
-            size="lg"
-            className="rounded-full shadow-lg w-full sm:w-auto"
-            onClick={handleReset}
-          >
-            <RotateCcw className="mr-2 h-5 w-5" />
-            Reset
-          </Button>
-      )}
-    </div>
+    <TooltipProvider>
+      <div className="fixed bottom-4 right-4 z-50 flex flex-col sm:flex-row items-center gap-2">
+        <Dialog open={isOpen} onOpenChange={setIsOpen}>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <DialogTrigger asChild>
+                <Button size="icon" className="rounded-full shadow-lg w-12 h-12">
+                  <Sparkles className="h-6 w-6" />
+                  <span className="sr-only">Personalize with AI</span>
+                </Button>
+              </DialogTrigger>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Personalize with AI</p>
+            </TooltipContent>
+          </Tooltip>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Personalize Content with AI</DialogTitle>
+              <DialogDescription>
+                Paste a job description below to tailor the portfolio content to highlight the most relevant skills and experiences.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="py-4">
+              <Textarea
+                placeholder="Paste the job description here..."
+                className="min-h-[200px]"
+                value={jobDescription}
+                onChange={(e) => setJobDescription(e.target.value)}
+              />
+            </div>
+            <DialogFooter>
+              <Button
+                onClick={handlePersonalize}
+                disabled={isLoading}
+              >
+                {isLoading ? (
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                ) : (
+                  <Sparkles className="mr-2 h-4 w-4" />
+                )}
+                Personalize
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+        {isPersonalized && (
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full shadow-lg w-12 h-12"
+                onClick={handleReset}
+              >
+                <RotateCcw className="h-6 w-6" />
+                <span className="sr-only">Reset Content</span>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Reset Content</p>
+            </TooltipContent>
+          </Tooltip>
+        )}
+      </div>
+    </TooltipProvider>
   );
 };
 
