@@ -31,7 +31,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-background text-foreground">
-        <SidebarProvider>
+        <SidebarProvider defaultOpen={false}>
           <Sidebar>
             <AppSidebar />
           </Sidebar>
