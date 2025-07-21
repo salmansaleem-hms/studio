@@ -50,7 +50,7 @@ const Education = () => {
                     </CardHeader>
                     <CardContent className="space-y-2">
                       <p className="font-medium text-muted-foreground">{edu.institution}</p>
-                      <p className="text-sm text-muted-foreground">{edu.years}</p>
+                      <p className="text-sm text-muted-foreground">Session: {edu.years}</p>
                       <p className="font-semibold text-primary">Percentage: {edu.percentage}</p>
                     </CardContent>
                   </Card>
