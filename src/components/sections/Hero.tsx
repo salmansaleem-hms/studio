@@ -23,7 +23,7 @@ const Hero = () => {
               Motivated professional with expertise in administration, digital marketing, and AI-powered solutions.
             </p>
             <Button asChild size="lg">
-              <Link href="/salman-saleem-resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Link href="https://drive.google.com/file/d/1jrHbX5WrxHF6MqIsEAE1pBryUmbWgWfj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 View My Resume
                 <Download className="ml-2 h-5 w-5" />
               </Link>
