@@ -1,6 +1,14 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from '@/components/ui/sidebar';
+import AppSidebar from '@/components/layout/AppSidebar';
 
 export const metadata: Metadata = {
   title: 'Salman Saleem Portfolio',
@@ -23,8 +31,18 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-background text-foreground">
-        {children}
-        <Toaster />
+        <SidebarProvider>
+          <Sidebar>
+            <AppSidebar />
+          </Sidebar>
+          <SidebarInset>
+            <div className="p-4 md:p-6">
+              <SidebarTrigger className="md:hidden" />
+            </div>
+            {children}
+            <Toaster />
+          </SidebarInset>
+        </SidebarProvider>
       </body>
     </html>
   );

@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import type { PersonalizeContentOutput } from '@/ai/flows/personalize-content';
-import Header from '@/components/layout/Header';
 import Hero from '@/components/sections/Hero';
 import AboutMe from '@/components/sections/AboutMe';
 import Education from '@/components/sections/Education';
@@ -57,7 +56,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
       <main className="flex-grow">
         <Hero />
         <AboutMe content={currentContent.aboutMe} />
