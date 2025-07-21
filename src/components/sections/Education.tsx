@@ -20,6 +20,12 @@ const educationData = [
     years: '2018-2020',
     percentage: '65%',
   },
+  {
+    degree: 'MATRICULATION',
+    institution: 'BISE BWP',
+    years: '2015-2017',
+    percentage: '69.81%',
+  },
 ];
 
 const Education = () => {
