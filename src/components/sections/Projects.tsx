@@ -1,12 +1,17 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Lightbulb } from 'lucide-react';
+import { CheckCircle, Lightbulb } from 'lucide-react';
 
 const Projects = () => {
   const project = {
-    title: 'A.I POWERED ATTENDANCE MANAGEMENT SYSTEM VIA WEBCAM',
-    tools: ['PYTHON DJANGO', 'SQLITE', 'HTML', 'CSS'],
-    description: "Developed a smart attendance system that leverages AI and webcam technology to automate and streamline attendance tracking. This final year project demonstrates practical application of Python, Django, and database management to create a real-world solution."
+    title: 'AI-Powered Attendance Management System via Webcam',
+    subtitle: 'Final Year University Project',
+    description: [
+      'Developed a facial recognition-based attendance system using Python and Django.',
+      'Integrated real-time webcam face detection with SQLite database for logging.',
+      'Designed a user-friendly frontend using HTML & CSS.',
+    ],
+    tools: ['Python', 'Django', 'SQLite', 'HTML', 'CSS', 'OpenCV'],
   };
 
   return (
@@ -17,15 +22,28 @@ const Projects = () => {
         </h2>
         <div className="max-w-3xl mx-auto">
           <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-            <CardHeader className="bg-muted flex flex-row items-center gap-4 p-6">
-               <div className="p-3 bg-primary/10 rounded-full">
-                <Lightbulb className="w-8 h-8 text-primary" />
+            <CardHeader className="bg-muted p-6">
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-primary/10 rounded-full">
+                  <Lightbulb className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <CardTitle className="text-2xl font-headline">{project.title}</CardTitle>
+                  <p className="text-muted-foreground font-medium">{project.subtitle}</p>
+                </div>
               </div>
-              <CardTitle className="text-2xl font-headline">{project.title}</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
-              <p className="text-muted-foreground mb-6">{project.description}</p>
-              <h3 className="font-semibold mb-3">Tools Used:</h3>
+              <ul className="space-y-4 mb-6">
+                {project.description.map((point, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-primary/80 mt-1 flex-shrink-0" />
+                    <span className="text-muted-foreground">{point}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <h3 className="font-semibold mb-3">Tools & Technologies:</h3>
               <div className="flex flex-wrap gap-2">
                 {project.tools.map((tool) => (
                   <Badge key={tool} variant="default" className="bg-accent text-accent-foreground">
