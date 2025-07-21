@@ -36,8 +36,8 @@ export default function RootLayout({
             <AppSidebar />
           </Sidebar>
           <SidebarInset>
-            <div className="p-4 md:p-6">
-              <SidebarTrigger className="md:hidden" />
+            <div className="fixed top-4 left-4 z-20 md:hidden">
+              <SidebarTrigger />
             </div>
             {children}
             <Toaster />
