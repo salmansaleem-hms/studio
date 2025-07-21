@@ -14,11 +14,28 @@ import AnimatedSection from '@/components/AnimatedSection';
 const originalContent = {
   aboutMe:
     'Motivated professional with experience in administration, digital marketing training, and management roles. Skilled in communication, leadership, and technical development, with a final year project on an AI-based attendance system using Python and Django. Certified in digital marketing, MS Office, and communication, combining tech expertise with training and team coordination abilities.',
-  technicalSkills: `Web Development: Hands-on experience with HTML, CSS, and Python Django for creating dynamic and responsive web applications.
-Digital Marketing Tools: Experience in executing marketing strategies using social media platforms, SEO techniques, and content planning.
-Office & Admin Tools: Proficient in MS Office (Word, Excel, PowerPoint) for documentation, reporting, and communication tasks.
-Project Implementation: Applied AI and webcam integration in real-world academic project development and testing.
-Training & Communication: Skilled in delivering training sessions and communicating with clients or students through various channels (calls, emails, visits).`,
+  technicalSkills: [
+    {
+      category: 'Web Development',
+      skills: ['HTML', 'CSS', 'Python (Django)', 'SQLite'],
+    },
+    {
+      category: 'Digital Marketing',
+      skills: ['Facebook & Instagram Ads', 'SEO', 'Social Media Management'],
+    },
+    {
+      category: 'Tools',
+      skills: ['MS Office (Word, Excel, PowerPoint)', 'Canva'],
+    },
+    {
+      category: 'Soft Skills',
+      skills: ['Leadership', 'Team Training', 'Communication', 'Planning'],
+    },
+    {
+      category: 'Other',
+      skills: ['Internet Research', 'Time Management'],
+    },
+  ],
   workExperience: [
     {
       title: 'Trainer & Operations Manager',
@@ -70,7 +87,7 @@ export default function Home() {
           <WorkExperience experiences={originalContent.workExperience} />
         </AnimatedSection>
         <AnimatedSection animationType="fade-in-up">
-          <Skills content={originalContent.technicalSkills} />
+          <Skills skills={originalContent.technicalSkills} />
         </AnimatedSection>
         <AnimatedSection animationType="fade-in-left">
           <Projects />
