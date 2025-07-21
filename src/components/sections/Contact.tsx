@@ -1,0 +1,70 @@
+import { Phone, Mail, Linkedin, MapPin } from 'lucide-react';
+import Link from 'next/link';
+import ContactForm from '../ContactForm';
+
+const contactDetails = [
+  {
+    icon: <Phone className="w-6 h-6 text-primary" />,
+    label: 'Phone / Whatsapp',
+    value: '+92 306 9007091',
+    href: 'tel:+923069007091',
+  },
+  {
+    icon: <Mail className="w-6 h-6 text-primary" />,
+    label: 'Email',
+    value: 'salmansaleem.7091@gmail.com',
+    href: 'mailto:salmansaleem.7091@gmail.com',
+  },
+  {
+    icon: <Linkedin className="w-6 h-6 text-primary" />,
+    label: 'LinkedIn',
+    value: 'salman-saleem-ab5493202',
+    href: 'https://pk.linkedin.com/in/salman-saleem-ab5493202',
+  },
+  {
+    icon: <MapPin className="w-6 h-6 text-primary" />,
+    label: 'Address',
+    value: 'Ahmad Pur East, Bahawalpur, Punjab, Pakistan',
+  },
+];
+
+const Contact = () => {
+  return (
+    <section id="contact" className="py-20 lg:py-32 scroll-mt-16">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">
+          CONTACT
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div className="space-y-8">
+            {contactDetails.map((item, index) => (
+              <div key={index} className="flex items-start gap-4">
+                <div className="flex-shrink-0 mt-1">{item.icon}</div>
+                <div>
+                  <h3 className="font-semibold text-lg">{item.label}</h3>
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {item.value}
+                    </Link>
+                  ) : (
+                    <p className="text-muted-foreground">{item.value}</p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div>
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
