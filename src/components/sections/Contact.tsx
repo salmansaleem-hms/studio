@@ -36,7 +36,7 @@ const contactDetails = [
   {
     icon: <MapPin className="w-6 h-6 text-primary" />,
     label: 'Address',
-    value: 'Ahmad Pur East, Bahawalpur, Punjab, Pakistan',
+    value: 'Nishtar Colony, Main Shadab Road, Bhatti Chowk, Lahore',
   },
 ];
 
