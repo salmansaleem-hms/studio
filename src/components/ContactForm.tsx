@@ -16,7 +16,9 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Send } from 'lucide-react';
+import { Loader2, Send } from 'lucide-react';
+import { sendEmail } from '@/ai/flows/send-email-flow';
+import { useState } from 'react';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -32,6 +34,7 @@ const formSchema = z.object({
 
 const ContactForm = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -42,13 +45,29 @@ const ContactForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log('Form submitted:', values);
-    toast({
-      title: 'Message Sent!',
-      description: 'Thank you for your message. I will get back to you shortly.',
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    try {
+      const result = await sendEmail(values);
+      if (result.success) {
+        toast({
+          title: 'Message Sent!',
+          description: 'Thank you for your message. I will get back to you shortly.',
+        });
+        form.reset();
+      } else {
+        throw new Error('Flow returned success: false');
+      }
+    } catch (error) {
+      console.error('Failed to send message:', error);
+      toast({
+        title: 'Error',
+        description: 'Failed to send your message. Please try again later.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -98,9 +117,13 @@ const ContactForm = () => {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full">
-              Send Message
-              <Send className="ml-2 h-4 w-4" />
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              ) : (
+                <Send className="mr-2 h-4 w-4" />
+              )}
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>
         </Form>
