@@ -17,7 +17,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Send } from 'lucide-react';
-import { sendWhatsapp } from '@/ai/flows/send-whatsapp-flow';
+import { saveToSheet } from '@/ai/flows/save-to-sheet-flow';
 import { useState } from 'react';
 
 const formSchema = z.object({
@@ -48,7 +48,7 @@ const ContactForm = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     try {
-      const result = await sendWhatsapp(values);
+      const result = await saveToSheet(values);
       if (result.success) {
         toast({
           title: 'Message Sent!',
@@ -56,7 +56,7 @@ const ContactForm = () => {
         });
         form.reset();
       } else {
-        throw new Error('Flow returned success: false');
+        throw new Error(result.error || 'Flow returned success: false');
       }
     } catch (error) {
       console.error('Failed to send message:', error);

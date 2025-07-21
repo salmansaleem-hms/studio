@@ -1,7 +1,7 @@
 'use server';
 /**
  * @fileOverview A flow to send a WhatsApp message with contact form data.
- *
+ * This file is not currently in use but is kept for potential future use.
  * - sendWhatsapp - A function that handles sending the message.
  * - SendWhatsappInput - The input type for the sendWhatsapp function.
  * - SendWhatsappOutput - The return type for the sendWhatsapp function.
