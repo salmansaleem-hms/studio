@@ -17,7 +17,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Send } from 'lucide-react';
-import { sendEmail } from '@/ai/flows/send-email-flow';
+import { sendWhatsapp } from '@/ai/flows/send-whatsapp-flow';
 import { useState } from 'react';
 
 const formSchema = z.object({
@@ -48,7 +48,7 @@ const ContactForm = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     try {
-      const result = await sendEmail(values);
+      const result = await sendWhatsapp(values);
       if (result.success) {
         toast({
           title: 'Message Sent!',
