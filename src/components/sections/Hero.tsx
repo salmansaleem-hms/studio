@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex items-center justify-center min-h-[calc(100vh-6rem)] bg-muted overflow-hidden -mt-12 md:-mt-16"
+      className="relative flex items-center justify-center min-h-[calc(100vh-6rem)] bg-muted overflow-hidden -mt-12 md:-mt-16 scroll-mt-16"
     >
       <div className="absolute inset-0 bg-grid-slate-200/[0.2] [mask-image:linear-gradient(to_bottom,white_50%,transparent_100%)] dark:bg-grid-slate-700/[0.2]"></div>
       <div className="container mx-auto px-4 z-10">
