@@ -83,10 +83,10 @@ const PersonalizationTool = ({
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center gap-4">
+    <div className="fixed bottom-4 right-4 z-50 flex flex-col sm:flex-row items-center gap-2">
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
-          <Button size="lg" className="rounded-full shadow-lg">
+          <Button size="lg" className="rounded-full shadow-lg w-full sm:w-auto">
             <Sparkles className="mr-2 h-5 w-5" />
             Personalize with AI
           </Button>
@@ -125,7 +125,7 @@ const PersonalizationTool = ({
          <Button
             variant="outline"
             size="lg"
-            className="rounded-full shadow-lg"
+            className="rounded-full shadow-lg w-full sm:w-auto"
             onClick={handleReset}
           >
             <RotateCcw className="mr-2 h-5 w-5" />
