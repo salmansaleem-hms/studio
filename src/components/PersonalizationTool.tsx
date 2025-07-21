@@ -83,7 +83,7 @@ const PersonalizationTool = ({
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50 flex items-center gap-4">
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
           <Button size="lg" className="rounded-full shadow-lg">
@@ -125,7 +125,7 @@ const PersonalizationTool = ({
          <Button
             variant="outline"
             size="lg"
-            className="rounded-full shadow-lg ml-4"
+            className="rounded-full shadow-lg"
             onClick={handleReset}
           >
             <RotateCcw className="mr-2 h-5 w-5" />
