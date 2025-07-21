@@ -19,20 +19,38 @@ Digital Marketing Tools: Experience in executing marketing strategies using soci
 Office & Admin Tools: Proficient in MS Office (Word, Excel, PowerPoint) for documentation, reporting, and communication tasks.
 Project Implementation: Applied AI and webcam integration in real-world academic project development and testing.
 Training & Communication: Skilled in delivering training sessions and communicating with clients or students through various channels (calls, emails, visits).`,
-  workExperience: `TRAINER & OPERATIONS MANAGER
-COMPANY: DISCOVER TECHNOLOGIES PVT. LTD
-EXPERIENCE: 1 YEARS
-DURATION: MAY 2024-MAY 2025
-
-DIGITAL MARKETING TRAINER
-COMPANY: DIGITAL NEXT, BWP
-EXPERIENCE: 1 YEARS
-DURATION: APR 2023-MAY 2024
-
-OFFICE ADMINISTRATOR
-COMPANY: THE SMART SCHOOL
-EXPERIENCE: 1 YEARS
-DURATION: MAR 2022- FEB 2023`,
+  workExperience: [
+    {
+      title: 'Trainer & Operations Manager',
+      company: 'Discover Technologies Pvt. Ltd',
+      duration: 'May 2024 – May 2025',
+      responsibilities: [
+        'Conducted professional training sessions on digital marketing and social media advertising.',
+        'Managed operations including student admissions, scheduling lectures, and fee processing.',
+        'Supervised daily center activities, maintained communication with clients/students, and coordinated between departments.',
+      ],
+    },
+    {
+      title: 'Digital Marketing Trainer',
+      company: 'Digital Next, Bahawalpur',
+      duration: 'Apr 2023 – May 2024',
+      responsibilities: [
+        'Delivered hands-on training in Facebook/Instagram advertising, SEO, and content strategy.',
+        'Assisted in curriculum development and organized marketing workshops for batches of students.',
+        'Supported students in developing marketing campaigns and client handling techniques.',
+      ],
+    },
+    {
+      title: 'Office Administrator',
+      company: 'The Smart School',
+      duration: 'Mar 2022 – Feb 2023',
+      responsibilities: [
+        'Handled administrative duties including staff coordination, student records, and reporting.',
+        'Facilitated communication between school administration and parents.',
+        'Managed Microsoft Office tools for documentation and academic tracking.',
+      ],
+    },
+  ],
 };
 
 export default function Home() {
@@ -49,7 +67,7 @@ export default function Home() {
           <Education />
         </AnimatedSection>
         <AnimatedSection animationType="zoom-in">
-          <WorkExperience content={originalContent.workExperience} />
+          <WorkExperience experiences={originalContent.workExperience} />
         </AnimatedSection>
         <AnimatedSection animationType="fade-in-up">
           <Skills content={originalContent.technicalSkills} />
