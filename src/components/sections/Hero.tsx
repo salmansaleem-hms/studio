@@ -33,7 +33,7 @@ const Hero = () => {
             <div className="relative w-72 h-72 md:w-96 md:h-96">
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl"></div>
               <Image
-                src="https://i.postimg.cc/y3sYkxgK/salman.jpg"
+                src="https://i.postimg.cc/rstdZtqD/C-V-Photo.png"
                 alt="Salman Saleem"
                 width={400}
                 height={400}
