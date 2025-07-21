@@ -33,12 +33,11 @@ const Hero = () => {
             <div className="relative w-72 h-72 md:w-96 md:h-96">
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl"></div>
               <Image
-                src="https://placehold.co/400x400.png"
+                src="https://i.postimg.cc/y3sYkxgK/salman.jpg"
                 alt="Salman Saleem"
                 width={400}
                 height={400}
                 priority
-                data-ai-hint="professional profile"
                 className="rounded-full object-cover border-4 border-primary/50 shadow-2xl"
               />
             </div>
