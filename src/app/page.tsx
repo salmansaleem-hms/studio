@@ -1,7 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-import type { PersonalizeContentOutput } from '@/ai/flows/personalize-content';
 import Hero from '@/components/sections/Hero';
 import AboutMe from '@/components/sections/AboutMe';
 import Education from '@/components/sections/Education';
@@ -11,7 +9,6 @@ import Certifications from '@/components/sections/Certifications';
 import Skills from '@/components/sections/Skills';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/layout/Footer';
-import PersonalizationTool from '@/components/PersonalizationTool';
 import AnimatedSection from '@/components/AnimatedSection';
 
 const originalContent = {
@@ -39,22 +36,6 @@ DURATION: MAR 2022- FEB 2023`,
 };
 
 export default function Home() {
-  const [personalizedContent, setPersonalizedContent] = useState<PersonalizeContentOutput | null>(
-    null
-  );
-
-  const handlePersonalize = (data: PersonalizeContentOutput | null) => {
-    setPersonalizedContent(data);
-  };
-
-  const currentContent = {
-    aboutMe: personalizedContent?.personalizedAboutMe || originalContent.aboutMe,
-    technicalSkills:
-      personalizedContent?.personalizedTechnicalSkills || originalContent.technicalSkills,
-    workExperience:
-      personalizedContent?.personalizedWorkExperience || originalContent.workExperience,
-  };
-
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow">
@@ -62,16 +43,16 @@ export default function Home() {
           <Hero />
         </AnimatedSection>
         <AnimatedSection animationType="fade-in-left">
-          <AboutMe content={currentContent.aboutMe} />
+          <AboutMe content={originalContent.aboutMe} />
         </AnimatedSection>
         <AnimatedSection animationType="fade-in-right">
           <Education />
         </AnimatedSection>
         <AnimatedSection animationType="zoom-in">
-          <WorkExperience content={currentContent.workExperience} />
+          <WorkExperience content={originalContent.workExperience} />
         </AnimatedSection>
         <AnimatedSection animationType="fade-in-up">
-          <Skills content={currentContent.technicalSkills} />
+          <Skills content={originalContent.technicalSkills} />
         </AnimatedSection>
         <AnimatedSection animationType="fade-in-left">
           <Projects />
@@ -84,11 +65,6 @@ export default function Home() {
         </AnimatedSection>
       </main>
       <Footer />
-      <PersonalizationTool
-        originalContent={originalContent}
-        onPersonalize={handlePersonalize}
-        isPersonalized={!!personalizedContent}
-      />
     </div>
   );
 }
