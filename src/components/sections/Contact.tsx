@@ -64,7 +64,7 @@ const Contact = () => {
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out.
             </p>
             <Button asChild size="lg">
-              <Link href="mailto:salmansaleem.7091@gmail.com">
+              <Link href="https://forms.gle/hEf5v7vbi3iMwAK77" target="_blank" rel="noopener noreferrer">
                 <Send className="mr-2 h-5 w-5" />
                 Contact Now
               </Link>
