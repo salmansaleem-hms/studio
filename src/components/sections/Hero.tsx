@@ -17,7 +17,7 @@ const Hero = () => {
               SALMAN SALEEM
             </h1>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-headline font-semibold text-primary mb-6">
-              ADMIN & TECH COORDINATOR
+              IT OFFICER | ADMIN & TECH COORDINATOR
             </h2>
             <p className="text-md sm:text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0 mb-8">
               Motivated professional with expertise in administration, digital marketing, and AI-powered solutions.
