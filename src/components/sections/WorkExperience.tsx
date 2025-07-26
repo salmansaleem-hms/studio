@@ -29,7 +29,7 @@ const WorkExperience = ({ experiences }: WorkExperienceProps) => {
                   </div>
                   <div>
                     <CardTitle className="text-xl">{exp.title}</CardTitle>
-                    <p className="font-medium text-muted-foreground">{exp.company}</p>
+                    <p className="font-medium text-muted-foreground italic">{exp.company}</p>
                     <p className="text-sm text-muted-foreground">{exp.duration}</p>
                   </div>
                 </div>
