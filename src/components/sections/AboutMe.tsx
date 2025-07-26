@@ -17,9 +17,11 @@ const AboutMe = ({ content }: AboutMeProps) => {
         <div className="max-w-4xl mx-auto">
           <Card className="shadow-lg">
             <CardContent className="p-8">
-              <p className="text-lg leading-relaxed text-card-foreground/80 mb-8 text-justify">
-                {content}
-              </p>
+              <div className="text-lg leading-relaxed text-card-foreground/80 mb-8 text-justify space-y-4">
+                {content.split('\n\n').map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
               <h3 className="text-xl font-semibold mb-4">Hobbies</h3>
               <div className="flex flex-wrap gap-2">
                 {hobbies.map((hobby) => (
