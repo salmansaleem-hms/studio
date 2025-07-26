@@ -36,7 +36,7 @@ const contactDetails = [
   {
     icon: <MapPin className="w-6 h-6 text-primary" />,
     label: 'Address',
-    value: 'Nishtar Colony, Main Shadab Road, Bhatti Chowk, Lahore',
+    value: 'Room no. 02, 2nd Floor Subhan Boys hostel, near Meezan Bank Ichra Branch Rasoolpura Ichra Lahore',
   },
 ];
 
