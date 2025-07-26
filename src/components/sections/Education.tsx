@@ -4,7 +4,7 @@ import { GraduationCap } from 'lucide-react';
 const educationData = [
   {
     degree: 'MCS',
-    institution: 'KFUEIT',
+    institution: 'Khwaja Fareed University of Engineering and Information Technology',
     years: '2023-2025',
   },
   {
