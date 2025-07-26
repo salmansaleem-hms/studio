@@ -20,7 +20,7 @@ const Hero = () => {
               IT OFFICER | ADMIN & TECH COORDINATOR
             </h2>
             <p className="text-md sm:text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0 mb-8">
-              Motivated professional with expertise in administration, digital marketing, and AI-powered solutions.
+            Motivated Professional With Expertise in Administration, Digital Marketing, and AI-Powered Solutions.
             </p>
             <Button asChild size="lg">
               <Link href="https://drive.google.com/file/d/1V2zk6Ecx8TSFqZGxFNAFxXFLnxUe7Ccb/view?usp=sharing" target="_blank" rel="noopener noreferrer">
