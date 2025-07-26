@@ -9,7 +9,7 @@ const educationData = [
     percentage: '74.25%',
   },
   {
-    degree: 'ADS (CS)',
+    degree: 'ADP (CS)',
     institution: 'IUB',
     years: '2020-2022',
     percentage: '83.45%',
