@@ -13,7 +13,7 @@ import AnimatedSection from '@/components/AnimatedSection';
 
 const originalContent = {
   aboutMe:
-    'Motivated professional with experience in administration, digital marketing training, and management roles. Skilled in communication, leadership, and technical development, with a final year project on an AI-based attendance system using Python and Django. Certified in digital marketing, MS Office, and communication, combining tech expertise with training and team coordination abilities.',
+    "I am a motivated and versatile professional with hands-on experience in administration, digital marketing training, and team management. I bring strong communication, leadership, and problem-solving skills, complemented by technical expertise in modern technologies.\n\nMy academic journey culminated in a final year project focused on building an AI-powered Attendance Management System using Python and Django, reflecting my ability to integrate cutting-edge tech into real-world solutions.\n\nI hold certifications in Digital Marketing, MS Office, and Professional Communication, demonstrating a well-rounded skill set that bridges the gap between technology, training, and strategic coordination. Passionate about continuous learning and innovation, I’m eager to contribute to projects that demand both technical know-how and strong organizational skills.",
   technicalSkills: [
     {
       category: 'Web Development',
