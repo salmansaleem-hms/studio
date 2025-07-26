@@ -6,25 +6,21 @@ const educationData = [
     degree: 'MCS',
     institution: 'KFUEIT',
     years: '2023-2025',
-    percentage: '74.25%',
   },
   {
     degree: 'ADP (CS)',
     institution: 'IUB',
     years: '2020-2022',
-    percentage: '83.45%',
   },
   {
     degree: 'INTERMEDIATE (I.CS)',
     institution: 'BISE BWP',
     years: '2018-2020',
-    percentage: '65%',
   },
   {
     degree: 'MATRICULATION',
     institution: 'BISE BWP',
     years: '2015-2017',
-    percentage: '69.81%',
   },
 ];
 
@@ -51,7 +47,6 @@ const Education = () => {
                     <CardContent className="space-y-2">
                       <p className="font-medium text-muted-foreground">{edu.institution}</p>
                       <p className="text-sm text-muted-foreground">Session: {edu.years}</p>
-                      <p className="font-semibold text-primary">Percentage: {edu.percentage}</p>
                     </CardContent>
                   </Card>
                 </div>
