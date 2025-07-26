@@ -9,17 +9,17 @@ const educationData = [
   },
   {
     degree: 'ADP (CS)',
-    institution: 'IUB',
+    institution: 'The Islamia University of Bahawalpur',
     years: '2020-2022',
   },
   {
     degree: 'INTERMEDIATE (I.CS)',
-    institution: 'BISE BWP',
+    institution: 'Board of Intermediate and Secondary Education, Bahawalpur',
     years: '2018-2020',
   },
   {
     degree: 'MATRICULATION',
-    institution: 'BISE BWP',
+    institution: 'Board of Intermediate and Secondary Education, Bahawalpur',
     years: '2015-2017',
   },
 ];
