@@ -17,7 +17,7 @@ const AboutMe = ({ content }: AboutMeProps) => {
         <div className="max-w-4xl mx-auto">
           <Card className="shadow-lg">
             <CardContent className="p-8">
-              <p className="text-lg leading-relaxed text-card-foreground/80 mb-8">
+              <p className="text-lg leading-relaxed text-card-foreground/80 mb-8 text-justify">
                 {content}
               </p>
               <h3 className="text-xl font-semibold mb-4">Hobbies</h3>
