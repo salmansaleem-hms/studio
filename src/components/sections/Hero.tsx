@@ -24,7 +24,7 @@ const Hero = () => {
             </p>
             <Button asChild size="lg">
               <Link href="https://drive.google.com/uc?export=download&id=1V2zk6Ecx8TSFqZGxFNAFxXFLnxUe7Ccb" target="_blank" rel="noopener noreferrer">
-                Download My Resume
+                View My Resume
                 <Download className="ml-2 h-5 w-5" />
               </Link>
             </Button>
