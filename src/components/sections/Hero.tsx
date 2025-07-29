@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react';
 import Link from 'next/link';
 
 const Hero = () => {
@@ -25,7 +24,6 @@ const Hero = () => {
             <Button asChild size="lg">
               <Link href="https://drive.google.com/uc?export=download&id=1V2zk6Ecx8TSFqZGxFNAFxXFLnxUe7Ccb" target="_blank" rel="noopener noreferrer">
                 View My Resume
-                <Download className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
