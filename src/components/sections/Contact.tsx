@@ -36,7 +36,7 @@ const contactDetails = [
   {
     icon: <MapPin className="w-6 h-6 text-primary" />,
     label: 'Address',
-    value: 'Moh Katra Ahmad Khan, near Dera Nikka Shah, Ahmad Pur East',
+    value: 'Lahore',
   },
 ];
 
