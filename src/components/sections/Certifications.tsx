@@ -6,6 +6,7 @@ const certifications = [
   'ENGLISH LANGUAGE & PERSONALITY GROOMING COURSE',
   'DIGITAL MARKETING',
   'MS OFFICE DIPLOMA',
+  'AUTOCAD DIPLOMA',
 ];
 
 const Certifications = () => {
