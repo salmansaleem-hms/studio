@@ -25,7 +25,7 @@ const originalContent = {
     },
     {
       category: 'Tools',
-      skills: ['MS Office (Word, Excel, PowerPoint)', 'Canva'],
+      skills: ['MS Office (Word, Excel, PowerPoint)', 'Canva Pro'],
     },
     {
       category: 'Soft Skills',
