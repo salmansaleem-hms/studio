@@ -29,11 +29,19 @@ const originalContent = {
     },
     {
       category: 'Soft Skills',
-      skills: ['Leadership', 'Team Training', 'Communication', 'Planning'],
+      skills: [
+        'Problem Solving',
+        'Communication',
+        'Team Collaboration',
+        'Leadership & Training',
+        'Time Management',
+        'Adaptibility',
+        'Customer Service',
+      ],
     },
     {
       category: 'Other',
-      skills: ['Internet Research', 'Time Management'],
+      skills: ['Internet Research'],
     },
   ],
   workExperience: [
