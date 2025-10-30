@@ -1,4 +1,6 @@
-import { Phone, Mail, Linkedin, MapPin, Send, Calendar, MessageCircle } from 'lucide-react';
+'use client';
+
+import { Phone, Mail, Linkedin, MapPin, Send, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
@@ -13,13 +15,12 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 
-
 const contactDetails = [
   {
     icon: <Phone className="w-6 h-6 text-primary" />,
     label: 'Phone / Whatsapp',
-    value: '+92 306 9007091',
-    href: 'tel:+923069007091',
+    value: '+92 308 9495274',
+    href: 'tel:+923089495274',
   },
   {
     icon: <Mail className="w-6 h-6 text-primary" />,
@@ -36,7 +37,7 @@ const contactDetails = [
   {
     icon: <MapPin className="w-6 h-6 text-primary" />,
     label: 'Address',
-    value: 'Room no. 02, 2nd Floor Subhan Boys hostel, near Meezan Bank Ichra Branch Rasoolpura Ichra Lahore',
+    value: 'Muslim Town, Back Side Darbar Mahal, Bahawalpur',
   },
 ];
 
@@ -75,37 +76,41 @@ const Contact = () => {
             <p className="text-muted-foreground mb-6">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out.
             </p>
-            <AlertDialog>
-              <AlertDialogTrigger asChild>
-                <Button size="lg">
-                  <Send className="mr-2 h-5 w-5" />
-                  Contact Now
-                </Button>
-              </AlertDialogTrigger>
-              <AlertDialogContent>
-                <AlertDialogHeader>
-                  <AlertDialogTitle>Choose a Contact Method</AlertDialogTitle>
-                  <AlertDialogDescription>
-                    How would you like to get in touch? You can book a time that works for you or message me directly for a quicker response.
-                  </AlertDialogDescription>
-                </AlertDialogHeader>
-                <AlertDialogFooter className="flex-col sm:flex-col sm:space-x-0 gap-2 sm:gap-2">
-                  <AlertDialogAction asChild>
-                    <Link href="https://forms.gle/hEf5v7vbi3iMwAK77" target="_blank" rel="noopener noreferrer">
-                      <Calendar className="mr-2 h-4 w-4" />
-                      Book Appointment for Later
-                    </Link>
-                  </AlertDialogAction>
-                  <AlertDialogAction asChild>
-                    <Link href="https://wa.me/923089495274" target="_blank" rel="noopener noreferrer">
-                       <MessageCircle className="mr-2 h-4 w-4" />
-                       Contact Immediately
-                    </Link>
-                  </AlertDialogAction>
-                   <AlertDialogCancel>Cancel</AlertDialogCancel>
-                </AlertDialogFooter>
-              </AlertDialogContent>
-            </AlertDialog>
+            <div className="flex gap-4 justify-center md:justify-start">
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <Button size="lg">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Call Now
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>Call via Mobile</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      Please use your mobile to call this number:
+                      <br />
+                      <strong className="text-lg text-primary">0308-9495274</strong>
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogAction asChild>
+                      <Link href="tel:03089495274">
+                        Call Now
+                      </Link>
+                    </AlertDialogAction>
+                    <AlertDialogCancel>Close</AlertDialogCancel>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
+
+              <Button size="lg" asChild>
+                <Link href="https://wa.me/923089495274" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Whatsapp
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

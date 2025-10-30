@@ -21,36 +21,37 @@ const originalContent = {
     },
     {
       category: 'Digital Marketing',
-      skills: ['Facebook & Instagram Ads', 'SEO', 'Social Media Management'],
+      skills: [
+        'Facebook & Instagram Accounts Creation',
+        'Facebook & Instagram Account Optimization',
+        'Facebook & Instagram Advertisement',
+        'Social Media Account Handling & Management',
+      ],
     },
     {
       category: 'Tools',
-      skills: ['MS Office (Word, Excel, PowerPoint)', 'Canva'],
+      skills: ['MS Office (Word, Excel, PowerPoint)', 'Canva Pro'],
     },
     {
       category: 'Soft Skills',
-      skills: ['Leadership', 'Team Training', 'Communication', 'Planning'],
+      skills: [
+        'Problem Solving',
+        'Communication',
+        'Team Collaboration',
+        'Leadership & Training',
+        'Adaptibility',
+      ],
     },
     {
       category: 'Other',
-      skills: ['Internet Research', 'Time Management'],
+      skills: ['Internet Research', 'Time Management', 'Customer Service'],
     },
   ],
   workExperience: [
     {
-      title: 'Trainer & Operations Manager',
-      company: 'Discover Technologies Pvt. Ltd',
-      duration: 'May 2024 – May 2025',
-      responsibilities: [
-        'Conducted professional training sessions on digital marketing and social media advertising.',
-        'Managed operations including student admissions, scheduling lectures, and fee processing.',
-        'Supervised daily center activities, maintained communication with clients/students, and coordinated between departments.',
-      ],
-    },
-    {
       title: 'Digital Marketing Trainer',
       company: 'Digital Next, Bahawalpur',
-      duration: 'Apr 2023 – May 2024',
+      duration: 'Mar 2025 – Present',
       responsibilities: [
         'Delivered hands-on training in Facebook/Instagram advertising, SEO, and content strategy.',
         'Assisted in curriculum development and organized marketing workshops for batches of students.',
@@ -58,9 +59,19 @@ const originalContent = {
       ],
     },
     {
+      title: 'Trainer & Operations Manager',
+      company: 'Discover Technologies Pvt. Ltd',
+      duration: 'Sep 2023 – Mar 2024',
+      responsibilities: [
+        'Conducted professional training sessions on digital marketing and social media advertising.',
+        'Managed operations including student admissions, scheduling lectures, and fee processing.',
+        'Supervised daily center activities, maintained communication with clients/students, and coordinated between departments.',
+      ],
+    },
+    {
       title: 'Office Administrator',
       company: 'The Smart School',
-      duration: 'Mar 2022 – Feb 2023',
+      duration: 'Sep 2022 – Feb 2023',
       responsibilities: [
         'Handled administrative duties including staff coordination, student records, and reporting.',
         'Facilitated communication between school administration and parents.',
