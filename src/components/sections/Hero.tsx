@@ -22,7 +22,7 @@ const Hero = () => {
             Motivated Professional With Expertise in Administration, Digital Marketing, and AI-Powered Solutions.
             </p>
             <Button asChild size="lg">
-              <Link href="https://drive.google.com/uc?export=download&id=1V2zk6Ecx8TSFqZGxFNAFxXFLnxUe7Ccb" target="_blank" rel="noopener noreferrer">
+              <Link href="https://drive.google.com/file/d/1nQOBtHfB43e9t4pedjrO7f691mpsh7s3/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                 View My Resume
               </Link>
             </Button>
