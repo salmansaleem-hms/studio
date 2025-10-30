@@ -18,8 +18,8 @@ const contactDetails = [
   {
     icon: <Phone className="w-6 h-6 text-primary" />,
     label: 'Phone / Whatsapp',
-    value: '+92 306 9007091',
-    href: 'tel:+923069007091',
+    value: '+92 308 9495274',
+    href: 'tel:+923089495274',
   },
   {
     icon: <Mail className="w-6 h-6 text-primary" />,
