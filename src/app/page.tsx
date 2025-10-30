@@ -34,14 +34,12 @@ const originalContent = {
         'Communication',
         'Team Collaboration',
         'Leadership & Training',
-        'Time Management',
         'Adaptibility',
-        'Customer Service',
       ],
     },
     {
       category: 'Other',
-      skills: ['Internet Research'],
+      skills: ['Internet Research', 'Time Management', 'Customer Service'],
     },
   ],
   workExperience: [
