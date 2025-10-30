@@ -21,7 +21,12 @@ const originalContent = {
     },
     {
       category: 'Digital Marketing',
-      skills: ['Facebook & Instagram Ads', 'SEO', 'Social Media Management'],
+      skills: [
+        'Facebook & Instagram Accounts Creation',
+        'Facebook & Instagram Account Optimization',
+        'Facebook & Instagram Advertisement',
+        'Social Media Account Handling & Management',
+      ],
     },
     {
       category: 'Tools',
