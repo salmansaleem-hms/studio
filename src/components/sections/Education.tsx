@@ -49,7 +49,7 @@ const Education = () => {
                       <p className="font-medium text-muted-foreground">{edu.institution}</p>
                       <p className="text-sm text-muted-foreground italic">Session: {edu.years}</p>
                       {edu.status && (
-                        <p className="text-sm font-semibold text-primary">{edu.status}</p>
+                        <p className="text-sm text-muted-foreground italic">{edu.status}</p>
                       )}
                     </CardContent>
                   </Card>
